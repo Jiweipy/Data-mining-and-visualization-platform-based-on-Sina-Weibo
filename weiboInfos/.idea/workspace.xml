@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cb2e92a-538f-4ab9-8f76-c7b24574c616" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Weibo$HotPerson.coverage" NAME="HotPerson Coverage Results" MODIFIED="1582181424832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$PersonFollower.coverage" NAME="PersonFollower Coverage Results" MODIFIED="1582814862465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YQI1LYA0GSEjsXeIXw4cG1S4w2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="FullScreen" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Python.monitor">
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="DataSave" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DataSave.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Search.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="comment_api" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/comment_api.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="monitor" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/monitor.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="weiboInfo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/weiboInfo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="Weibo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.monitor" />
+      <item itemvalue="Python.comment_api" />
+      <item itemvalue="Python.Search" />
+      <item itemvalue="Python.DataSave" />
+      <item itemvalue="Python.weiboInfo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.monitor" />
+        <item itemvalue="Python.comment_api" />
+        <item itemvalue="Python.weiboInfo" />
+        <item itemvalue="Python.DataSave" />
+        <item itemvalue="Python.Search" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cb2e92a-538f-4ab9-8f76-c7b24574c616" name="Default" comment="" />
+      <created>1577422599612</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577422599612</updated>
+      <workItem from="1582868176122" duration="2806000" />
+      <workItem from="1583300940874" duration="5397000" />
+      <workItem from="1583386166970" duration="1591000" />
+      <workItem from="1583573554888" duration="37091000" />
+      <workItem from="1583739946856" duration="192000" />
+      <workItem from="1583740491568" duration="20153000" />
+      <workItem from="1583806354337" duration="280000" />
+      <workItem from="1583806638061" duration="10715000" />
+      <workItem from="1583823381102" duration="18371000" />
+      <workItem from="1583851484939" duration="3350000" />
+      <workItem from="1583919051413" duration="3605000" />
+      <workItem from="1584147195346" duration="9050000" />
+      <workItem from="1584406887237" duration="6923000" />
+      <workItem from="1584422709507" duration="6767000" />
+      <workItem from="1584586397555" duration="1191000" />
+      <workItem from="1584677079642" duration="21754000" />
+      <workItem from="1584891936774" duration="86000" />
+      <workItem from="1584892028022" duration="245000" />
+      <workItem from="1588004161348" duration="444000" />
+      <workItem from="1588844961399" duration="3129000" />
+      <workItem from="1588871797019" duration="6000" />
+      <workItem from="1588920416390" duration="2003000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="104" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583740478864">
+      <screen x="0" y="0" width="1280" height="735" />
+    </state>
+    <state x="104" y="59" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.735@0.0.1280.735" timestamp="1583740478864" />
+    <state width="1238" height="281" key="GridCell.Tab.0.bottom" timestamp="1588871741769">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state width="1238" height="123" key="GridCell.Tab.0.bottom/0.0.1280.735@0.0.1280.735" timestamp="1584172613803" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom/0.0.1280.737@0.0.1280.737" timestamp="1583921833901" />
+    <state width="1238" height="273" key="GridCell.Tab.0.bottom/0.0.1280.739@0.0.1280.739" timestamp="1583934331839" />
+    <state width="1238" height="327" key="GridCell.Tab.0.bottom/0.0.1280.740@0.0.1280.740" timestamp="1584417671020" />
+    <state width="1238" height="247" key="GridCell.Tab.0.bottom/0.0.1280.745@0.0.1280.745" timestamp="1584438190937" />
+    <state width="1280" height="320" key="GridCell.Tab.0.bottom/0.0.1280.747@0.0.1280.747" timestamp="1584434406892" />
+    <state width="1238" height="85" key="GridCell.Tab.0.bottom/0.0.1280.748@0.0.1280.748" timestamp="1584454188875" />
+    <state width="1238" height="281" key="GridCell.Tab.0.bottom/4.0.1276.800@4.0.1276.800" timestamp="1588871741769" />
+    <state width="1238" height="281" key="GridCell.Tab.0.center" timestamp="1588871741767">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state width="1238" height="123" key="GridCell.Tab.0.center/0.0.1280.735@0.0.1280.735" timestamp="1584172613801" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center/0.0.1280.737@0.0.1280.737" timestamp="1583921833900" />
+    <state width="1238" height="273" key="GridCell.Tab.0.center/0.0.1280.739@0.0.1280.739" timestamp="1583934331838" />
+    <state width="1238" height="327" key="GridCell.Tab.0.center/0.0.1280.740@0.0.1280.740" timestamp="1584417671019" />
+    <state width="1238" height="247" key="GridCell.Tab.0.center/0.0.1280.745@0.0.1280.745" timestamp="1584438190936" />
+    <state width="1280" height="320" key="GridCell.Tab.0.center/0.0.1280.747@0.0.1280.747" timestamp="1584434406891" />
+    <state width="1238" height="85" key="GridCell.Tab.0.center/0.0.1280.748@0.0.1280.748" timestamp="1584454188875" />
+    <state width="1238" height="281" key="GridCell.Tab.0.center/4.0.1276.800@4.0.1276.800" timestamp="1588871741767" />
+    <state width="1238" height="281" key="GridCell.Tab.0.left" timestamp="1588871741766">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state width="1238" height="123" key="GridCell.Tab.0.left/0.0.1280.735@0.0.1280.735" timestamp="1584172613801" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left/0.0.1280.737@0.0.1280.737" timestamp="1583921833899" />
+    <state width="1238" height="273" key="GridCell.Tab.0.left/0.0.1280.739@0.0.1280.739" timestamp="1583934331837" />
+    <state width="1238" height="327" key="GridCell.Tab.0.left/0.0.1280.740@0.0.1280.740" timestamp="1584417671018" />
+    <state width="1238" height="247" key="GridCell.Tab.0.left/0.0.1280.745@0.0.1280.745" timestamp="1584438190935" />
+    <state width="1280" height="320" key="GridCell.Tab.0.left/0.0.1280.747@0.0.1280.747" timestamp="1584434406890" />
+    <state width="1238" height="85" key="GridCell.Tab.0.left/0.0.1280.748@0.0.1280.748" timestamp="1584454188874" />
+    <state width="1238" height="281" key="GridCell.Tab.0.left/4.0.1276.800@4.0.1276.800" timestamp="1588871741766" />
+    <state width="1238" height="281" key="GridCell.Tab.0.right" timestamp="1588871741768">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state width="1238" height="123" key="GridCell.Tab.0.right/0.0.1280.735@0.0.1280.735" timestamp="1584172613802" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right/0.0.1280.737@0.0.1280.737" timestamp="1583921833900" />
+    <state width="1238" height="273" key="GridCell.Tab.0.right/0.0.1280.739@0.0.1280.739" timestamp="1583934331839" />
+    <state width="1238" height="327" key="GridCell.Tab.0.right/0.0.1280.740@0.0.1280.740" timestamp="1584417671019" />
+    <state width="1238" height="247" key="GridCell.Tab.0.right/0.0.1280.745@0.0.1280.745" timestamp="1584438190936" />
+    <state width="1280" height="320" key="GridCell.Tab.0.right/0.0.1280.747@0.0.1280.747" timestamp="1584434406891" />
+    <state width="1238" height="85" key="GridCell.Tab.0.right/0.0.1280.748@0.0.1280.748" timestamp="1584454188875" />
+    <state width="1238" height="281" key="GridCell.Tab.0.right/4.0.1276.800@4.0.1276.800" timestamp="1588871741768" />
+    <state x="153" y="14" key="SettingsEditor" timestamp="1584892036448">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state x="149" y="13" key="SettingsEditor/0.0.1280.735@0.0.1280.735" timestamp="1582868365497" />
+    <state x="149" y="13" key="SettingsEditor/0.0.1280.737@0.0.1280.737" timestamp="1583661528647" />
+    <state x="149" y="13" key="SettingsEditor/0.0.1280.740@0.0.1280.740" timestamp="1583383958330" />
+    <state x="149" y="13" key="SettingsEditor/0.0.1280.748@0.0.1280.748" timestamp="1584430721476" />
+    <state x="153" y="14" key="SettingsEditor/4.0.1276.800@4.0.1276.800" timestamp="1584892036448" />
+    <state x="308" y="66" width="670" height="734" key="search.everywhere.popup" timestamp="1588845764358">
+      <screen x="4" y="0" width="1276" height="800" />
+    </state>
+    <state x="305" y="61" width="670" height="676" key="search.everywhere.popup/0.0.1280.737@0.0.1280.737" timestamp="1583674656311" />
+    <state x="308" y="66" width="670" height="734" key="search.everywhere.popup/4.0.1276.800@4.0.1276.800" timestamp="1588845764358" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Weibo$PersonFollower.coverage" NAME="PersonFollower Coverage Results" MODIFIED="1584160957902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$SearchHigh.coverage" NAME="SearchHigh Coverage Results" MODIFIED="1583630322101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$text.coverage" NAME="text Coverage Results" MODIFIED="1583850306001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$Search.coverage" NAME="Search Coverage Results" MODIFIED="1584699068772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$SingleInfo.coverage" NAME="SingleInfo Coverage Results" MODIFIED="1584699773980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$comment_api.coverage" NAME="comment_api Coverage Results" MODIFIED="1584701070708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$DataSave.coverage" NAME="DataSave Coverage Results" MODIFIED="1584699519013" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$HotPerson.coverage" NAME="HotPerson Coverage Results" MODIFIED="1583630613370" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$SearchUser.coverage" NAME="SearchUser Coverage Results" MODIFIED="1583592885280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$TargetDetail.coverage" NAME="TargetDetail Coverage Results" MODIFIED="1584436698143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Weibo$monitor.coverage" NAME="monitor Coverage Results" MODIFIED="1588846717264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
