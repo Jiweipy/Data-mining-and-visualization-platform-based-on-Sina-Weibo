@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>博主画像</title>
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts-wordcloud.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a href="{{url_for('index')}}"><img src="http://www.cbdio.com/image/attachement/jpg/site2/20150106/3417eb9bbd5916158ab154.jpg"
+    style="width: 70px; height: 60px;"></a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active" style="margin-left: 20px; font-size: 18px">
+        <a style="margin-left: 1px; font-size: 20px" class="nav-link" href="{{url_for('index')}}">主页 </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="请输入..." aria-label="Search" >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜一下</button>
+    </form>
+  </div>
+</nav>
+  <!-- 侧边栏（第一个大类） -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-home-tab" href="{{ url_for('index') }}" role="tab" aria-controls="v-pills-home" aria-selected="true">综合</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-weibo-tab" href="{{ url_for('weibosearch') }}" role="tab" aria-controls="v-pills-profile" aria-selected="false">微博分析</a>
+          <a class="nav-link active" style="margin-top: 30px" id="v-pills-user-tab"  href="{{ url_for('usersearch') }}" role="tab" aria-controls="v-pills-messages" aria-selected="false">博主分析</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-monitor-tab" href="{{url_for('monitor') }}" role="tab" aria-controls="v-pills-settings" aria-selected="false">微博监测</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-hotpot-tab" href="{{url_for('hotpoint')}}" role="tab" aria-controls="v-pills-settings" aria-selected="false">热点Top20</a>
+        </div>
+      </div>
+
+      <!--第二大类-->
+      <div class="col-sm-10">
+        <!--  博主信息  -->
+          <div class="shadow p-3 mb-5 bg-white rounded" style="margin-top: 10px">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="80" height="80"></div>
+            <div style="display: inline-block">
+              <div style='font: 14px "PingFang SC"; color: #222222; margin-left: 25px'><a href="#" style="color:#333"><h5>{{infos[0]}}</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 25px; margin-top: 15px'>性别:{{infos[7]}} | 地区:{{infos[1]}} | 标签:{{infos[2]}}</div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 25px; margin-top: 15px'>简介:{{infos[3]}}</div>
+            </div>
+            <div style="margin: 28px 0;">
+              <span style="font-size: 16px; color: rgb(34, 34, 34); font-weight: bold;">数据概况
+                  <span style="margin-left: 24px; color: rgb(102, 102, 102); font-size: 12px; font-weight: 500;">
+                      数据更新时间：{{infos[4]}}
+                  </span>
+              </span>
+            </div>
+            <div>
+                <div class="item" style="margin-left: 50px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">{{infos[5]}}</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">粉丝总数</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">{{infos[6]}}</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">微博总数</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">12504.3w</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">点赞总数</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">10753</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">平均点赞</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">11304.4w</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">评论总数</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">2572.5w</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">转发总数</div>
+                </div>
+                <div class="item" style="margin-left: 20px; display: inline-block; text-align: center;">
+                    <div  style="font-weight: 600; font-size: 21px; color: #333;">92.9%</div>
+                    <div class="des" style="font-size: 14px; color: #666; margin-top: 5px;">赞粉比</div>
+                </div>
+
+            </div>
+          </div>
+
+          <!--导航栏-->
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('userinfo') }}">数据分析</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{{url_for('userhotweibo')}}">热门微博</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('userfansinfo') }}">粉丝画像</a>
+              </li>
+          </ul>
+          <!--数据分析-->
+
+
+
+
+<!-- 主js函数-->
+    <script>
+        $(
+                function () {
+                    fetchData_compare();
+                    }
+            );
+
+    </script>
+          <!-- 关键词 -->
+          <div class="shadow p-3 mb-5 bg-white rounded" >
+        <div id="compare" style="width:900px;height:350px" >
+            <script>
+                var compares = echarts.init(document.getElementById('compare'), 'white', {renderer: 'canvas'});
+                function fetchData_compare() {
+                    $.ajax({
+                        type: "GET",
+                        url: "http://127.0.0.1:5000/bar-keys-content",
+                        dataType: 'json',
+                        success: function (result) {
+                            compares.setOption(result);
+                        }
+                    });
+                }
+            </script>
+        </div>
+              </div>
+    <!-- 微博内容展示 -->
+        <div class="shadow p-3 mb-5 bg-white rounded">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="50" height="50"></div>
+            <div style="display: inline-block">
+              <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">人民日报</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：2012-09-01 16:09:21 | 类别：体育 | 来自：媒体版微博</div>
+            </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p  style="font-size: 15px">【中国继续领跑残奥会奖牌榜】8月31日，伦敦残奥会第二个比赛日，中国代表团赢得了7金4银8铜，以13金10银11铜高居奖牌榜首。残奥会也有“乌龙”事件：女子铁饼F35/36级比赛，裁判使用了不正确的成绩资料，中国选手吴晴被宣布获得银牌。好在颁奖仪式后及时修正，才让吴晴的这枚金牌失而复得。[good]"</p>
+              <div style="text-align: right; margin-top: 30px;">
+                   <img src="/static/img/trans.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px";>222</a>
+                  <img src="/static/img/pinglun.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px">143</a>
+                  <img src="/static/img/zan.png" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px;">
+                  <a style="color: #6c757d; font-size: 17px">2</a>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+          <div class="shadow p-3 mb-5 bg-white rounded">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="50" height="50"></div>
+            <div style="display: inline-block">
+              <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">人民日报</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：2012-09-01 14:29:39 | 类别：社会 | 来自：媒体版微博</div>
+            </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p  style="font-size: 15px"> 【中石化继续领跑中国企业500强】2012中国企业500强今日放榜，中石化连续8年领跑榜单，中石油、国家电网、工商银行、建设银行等紧随其后。值得关注的是榜单中仅有38家企业换榜，为发布这一榜单11年来最低，说明中国大企业格局已经具有相当的稳定性。via新华网 http://t.cn/zWBTDml</p>
+                <div style="text-align: right; margin-top: 30px;">
+                   <img src="/static/img/trans.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px">220</a>
+                  <img src="/static/img/pinglun.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px">237</a>
+                  <img src="/static/img/zan.png" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px;">
+                  <a style="color: #6c757d; font-size: 17px">7</a>
+              </div>
+            </blockquote>
+          </div>
+        </div><div class="shadow p-3 mb-5 bg-white rounded">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="50" height="50"></div>
+            <div style="display: inline-block">
+              <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">人民日报</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：2050-10-01 | 类别：情感 | 来自：Iphone 7</div>
+            </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p  style="font-size: 15px">感谢大家的“中国早期”。希望在有生之年能再看到这个标题，而且没有 “中国早期”四个字。</p>
+                <div style="text-align: right; margin-top: 30px;">
+                   <img src="/static/img/trans.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px">2323</a>
+                  <img src="/static/img/pinglun.svg" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px; color: #6c757d;">
+                  <a style="color: #6c757d; font-size: 17px">2323</a>
+                  <img src="/static/img/zan.png" width="20" height="20" class="d-inline-block align-top" alt="" style="margin-left: 20px;">
+                  <a style="color: #6c757d; font-size: 17px">2323</a>
+              </div>
+            </blockquote>
+          </div>
+        </div>
+          <div class="shadow p-3 mb-5 bg-white rounded">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="50" height="50"></div>
+            <div style="display: inline-block">
+              <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">人民日报</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：2050-10-01 | 类别：情感 | 来自：Iphone 7</div>
+            </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p  style="font-size: 15px">感谢大家的厚爱和认可。我们继续努力，希望若干年后会再看到这标题，而且没有“早期” 两字。希望在有生之年能再看到这个标题，而且没有 “中国早期”四个字。 感谢大家的厚爱和认可。我们继续努力，希望若干年后会再看到这标题，而且没有“早期” 两字。希望在有生之年能再看到这个标题，而且没有 “中国早期”四个字。</p>
+              <footer class="blockquote-footer" style="text-align: right">| 转发：2323 | 评论：2323 | 赞：4546 |</footer>
+            </blockquote>
+          </div>
+        </div>
+          <div class="shadow p-3 mb-5 bg-white rounded">
+            <div style="display: inline-block"><img class="rounded-circle" src="../static/img/avator1.jpg" alt="读取失败" width="50" height="50"></div>
+            <div style="display: inline-block">
+              <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">人民日报</h5></a></div>
+              <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：2050-10-01 | 类别：情感 | 来自：Iphone 7</div>
+            </div>
+          <div class="card-body">
+            <blockquote class="blockquote mb-0">
+              <p  style="font-size: 15px">感谢大家的厚爱和认可。我们继续努力，希望若干年后会再看到这标题，而且没有“早期” 两字。希望在有生之年能再看到这个标题，而且没有 “中国早期”四个字。 感谢大家的厚爱和认可。我们继续努力，希望若干年后会再看到这标题，而且没有“早期” 两字。希望在有生之年能再看到这个标题，而且没有 “中国早期”四个字。</p>
+              <footer class="blockquote-footer" style="text-align: right">| 转发：2323 | 评论：2323 | 赞：4546 |</footer>
+            </blockquote>
+          </div>
+        </div>
+
+
+
+
+
+<!--  ######  -->
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

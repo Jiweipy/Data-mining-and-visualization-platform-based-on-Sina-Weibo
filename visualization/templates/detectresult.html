@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>搜索之后的结果</title>
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts.min.js"></script>
+    <script type="text/javascript" src="/static/js/echarts-wordcloud.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+
+<body>
+  <!-- 导航栏 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a href="{{url_for('index')}}"><img src="http://www.cbdio.com/image/attachement/jpg/site2/20150106/3417eb9bbd5916158ab154.jpg"
+    style="width: 70px; height: 60px;"></a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active" style="margin-left: 20px; font-size: 18px">
+        <a style="margin-left: 1px; font-size: 20px" class="nav-link" href="{{url_for('index')}}">主页 </a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="请输入..." aria-label="Search" >
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">搜一下</button>
+    </form>
+  </div>
+</nav>
+  <!-- 侧边栏（第一个大类） -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-home-tab" href="{{ url_for('index') }}" role="tab" aria-controls="v-pills-home" aria-selected="true">综合</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-weibo-tab" href="{{ url_for('weibosearch') }}" role="tab" aria-controls="v-pills-profile" aria-selected="false">微博分析</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-user-tab"  href="{{ url_for('usersearch') }}" role="tab" aria-controls="v-pills-messages" aria-selected="false">博主分析</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-monitor-tab" href="{{url_for('monitor') }}" role="tab" aria-controls="v-pills-settings" aria-selected="false">微博监测</a>
+          <a class="nav-link" style="margin-top: 30px" id="v-pills-hotpot-tab" href="{{url_for('hotpoint')}}" role="tab" aria-controls="v-pills-settings" aria-selected="false">热点Top20</a>
+        </div>
+      </div>
+      <div class="col-sm-10">
+        <!--导航栏-->
+         <div class="shadow-sm p-3 mb-5 bg-white rounded" style="margin-top: 15px">
+          <ul class="nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">微博监控</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('monitor_history') }}">监控历史</a>
+              </li>
+          </ul>
+           <!--  -->
+        <div align="center" style="margin-top: 30px">
+          <img style="width: 228px; height: 138px;" data-v-b67cd2b2="" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1588683063742&di=54f7582cb6d6344188f28722ede339ec&imgtype=0&src=http%3A%2F%2Fpic183.nipic.com%2Ffile%2F20180928%2F3046502_143017819000_2.jpg" >
+          <p style="font-size:12px; color: #999999">可对微博进行监控，提供分钟级的点赞数、评论数、转发数监测，掌握微博热度走向。</p>
+        </div>
+
+        <!--           -->
+           <div style="margin-left: 100px; margin-top: 50px">
+
+               <!-- 搜索框 -->
+        <form action="http://127.0.0.1:5000/monitor-history" method="post">
+             <div class="input-group mb-2" style="margin-top: 10px; width: 700px">
+                <input type="text" class="form-control" name="link" id="search-m" value={{results["weibo_url"]}} aria-label="Recipient's username" aria-describedby="button-addon2"/>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary"  style="background-color:#007bff; color: #fff; border-color: #007bff">搜索</button>
+                </div>
+             </div>
+<!--        </form>-->
+               <!-- 微博详细信息 -->
+                  <div class="shadow-none p-3 mb-5 bg-light rounded" style=" width: 700px">
+                <div style="display: inline-block"><img class="rounded-circle" src={{results["avatar"]}} alt="读取失败" width="60" height="60"></div>            <div style="display: inline-block">
+                      <div style='font: 10px "PingFang SC"; color: #222222; margin-left: 15px'><a href="#" style="color:#333"><h5 style="font-size: 17.5px">{{results["nick"]}}</h5></a></div>
+                      <div style='font: 13px "PingFang SC"; color: #666666; margin-left: 15px; margin-top: 15px'>发布于：{{results["creat_time"]}}</div>
+                    </div>
+                  <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                      <p  style="font-size: 10px;"><a href="{{url_for('weiboinfo')}}" style="color: #222222">{{results["content"]}}</a></p>
+                    </blockquote>
+                  </div>
+                </div>
+
+              <hr style="margin-top: 20px">
+         <!--   监控时长  -->
+<!--               <form action="http://127.0.0.1:5000/ttt" method="post">-->
+        <p style="margin-top: 20px; font-size: 14px; color: #303133; margin-bottom: 10px" >监控时长</p>
+
+       <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="12">
+          <label class="form-check-label" for="inlineRadio1" style="font-size: 14px">12小时</label>
+       </div>
+
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="24">
+          <label class="form-check-label" for="inlineRadio2" style="font-size: 14px">24小时</label>
+        </div>
+        <!-- 监控频率  -->
+             <p style="margin-top: 20px; font-size: 14px; color: #303133; margin-bottom: 10px" >监控频率</p>
+
+       <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio3" value="10">
+          <label class="form-check-label" for="inlineRadio3" style="font-size: 14px">10分钟</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio4" value="30">
+          <label class="form-check-label" for="inlineRadio4" style="font-size: 14px">30分钟</label>
+        </div>
+           <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOption" id="inlineRadio5" value="60">
+          <label class="form-check-label" for="inlineRadio5" style="font-size: 14px">60分钟</label>
+        </div>
+             <hr style="margin-top: 50px; margin-bottom: 30px">
+            <script type="text/javascript">
+                function display_alert()
+                      {
+                        alert("任务添加完成！");
+                      }
+            </script>
+                <button type="submit" class="btn btn-warning" onclick="display_alert()" style="width: 150px; margin-left: 270px">开始监控</button>
+           </form>
+       </div>
+
+
+
+       </div>
+
+
+
+      </div>
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+</body>
+</html>
